@@ -1,6 +1,10 @@
 --loading the schema
 \i schema.ddl 
---loading the data (not done yet)
+
+--loading the data
+\COPY Atheletes from atheletes.csv with csv
+\COPY Countries from countries_full.csv with csv
+\COPY Events from events.csv with csv
 
 --getting a description of each table 
 \d Atheletes
