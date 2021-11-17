@@ -2,7 +2,7 @@ DROP SCHEMA IF EXISTS Olympics CASCADE;
 CREATE SCHEMA Olympics;
 SET SEARCH_PATH TO Olympics;
 
-CREATE TABLE Atheletes (
+CREATE TABLE Athletes (
     id INT NOT NULL,
     name TEXT,
     dob TIMESTAMP NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Performance (
 
 CREATE TABLE Countries (
     country TEXT NOT NULL,
-    code INT NOT NULL,
+    code TEXT NOT NULL,
     population FLOAT NOT NULL,
     gdb_per_capita FLOAT NOT NULL,
     PRIMARY KEY (code),
