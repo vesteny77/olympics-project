@@ -2,21 +2,25 @@
 \i schema.ddl 
 
 --loading the data
-\COPY Atheletes from atheletes.csv with csv
+\COPY Atheletes(id, name, dob, height, weight) from atheletes.csv with csv
 \COPY Countries from countries_full.csv with csv
+\COPY Performance(id, nationality, sport, gold, silver, bronze) from atheletes.csv with csv 
 \COPY Events from events.csv with csv
 
 --getting a description of each table 
 \d Atheletes
 \d Countries
+\d Performance
 \d Events
 
 --showing the number of rows in each table 
 SELECT count(*) FROM Atheletes;
 SELECT count(*) FROM Countries;
+SELECT count(*) FROM Performance;
 SELECT count(*) FROM Events;
 
 --showing a sample of each table's content
 SELECT * FROM Atheletes;
 SELECT * FROM Countries;
+SELECT * FROM Performance;
 SELECT * FROM Events;
