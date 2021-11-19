@@ -57,6 +57,9 @@ DROP TABLE
  weight | double precision            |           | not null |
 Indexes:
     "athletes_pkey" PRIMARY KEY, btree (id)
+Check constraints:
+    "athletes_height_check" CHECK (height > 0.0::double precision AND height < 3.0::double precision)
+    "athletes_weight_check" CHECK (weight > 0.0::double precision)
 Referenced by:
     TABLE "performance" CONSTRAINT "performance_id_fkey" FOREIGN KEY (id) REFERENCES athletes(id)
 
@@ -72,6 +75,8 @@ Referenced by:
 Indexes:
     "countries_pkey" PRIMARY KEY, btree (code)
     "countries_country_key" UNIQUE CONSTRAINT, btree (country)
+Check constraints:
+    "countries_check" CHECK (population > 0::double precision AND gdp_per_capita > 0.0::double precision)
 Foreign-key constraints:
     "countries_code_fkey" FOREIGN KEY (code) REFERENCES entities(code)
 
@@ -88,6 +93,8 @@ Foreign-key constraints:
  bronze      | integer               |           | not null |
 Indexes:
     "performance_pkey" PRIMARY KEY, btree (id)
+Check constraints:
+    "performance_check" CHECK (gold >= 0 AND silver >= 0 AND bronze >= 0)
 Foreign-key constraints:
     "performance_id_fkey" FOREIGN KEY (id) REFERENCES athletes(id)
     "performance_sport_fkey" FOREIGN KEY (sport) REFERENCES events(sport)

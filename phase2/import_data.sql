@@ -7,13 +7,13 @@ DROP TABLE IF EXISTS EventsTmp CASCADE;
 
 CREATE TABLE AthletesTmp (
     id INT,
-    name TEXT,
-    nationality TEXT,
+    name VARCHAR(80),
+    nationality CHAR(3),
     sex TEXT,
     dob TIMESTAMP,
     height FLOAT,
     weight FLOAT,
-    sport TEXT,
+    sport VARCHAR(35),
     gold INT,
     silver INT,
     bronze INT,
@@ -22,7 +22,7 @@ CREATE TABLE AthletesTmp (
 
 CREATE TABLE EventsTmp (
     id INT,
-    sport TEXT,
+    sport VARCHAR(35),
     discipline TEXT,
     name TEXT,
     sex TEXT,
