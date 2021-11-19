@@ -35,7 +35,6 @@ def clean_countries(deleted_rows, cleaned_athletes):
     countries = pd.read_csv('../data/countries_full.csv')
     countries_del = set(deleted_rows['nationality'].tolist())
     countries_present = set(cleaned_athletes['nationality'].tolist())
-    original_ath = pd.read_csv('../data/athletes.csv')
 
     to_be_deleted = []
     # countries no longer present in athletes dataset after cleaning
