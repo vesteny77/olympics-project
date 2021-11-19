@@ -232,8 +232,8 @@ Referenced by:
  643664378 | HUN         | aquatics   |    3 |      1 |      0
 (8 rows)
 
-SELECT * FROM Entities
-WHERE code NOT IN (SELECT code FROM Countries);
+=> SELECT * FROM Entities
+-> WHERE code NOT IN (SELECT code FROM Countries);
 
  code
 ------
@@ -251,8 +251,8 @@ WHERE code NOT IN (SELECT code FROM Countries);
 (11 rows)
 
 
-SELECT * FROM Events
-ORDER BY sport LIMIT 5;
+=> SELECT * FROM Events
+-> ORDER BY sport LIMIT 5;
 
    sport
 ------------
