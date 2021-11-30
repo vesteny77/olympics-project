@@ -1,0 +1,23 @@
+
+-- Importing a file such as this will let you quickly create a demo to hand
+-- in. You may edit this to customize it.  For instance, you may have your
+-- data in a csv file and need a different command to load it in, you
+-- may differently named files, or you may have your queries split into more
+-- files than expected here.
+--
+\echo -------------------- Loading schema and data: -------------------- 
+\echo
+\i schema.txt
+\i data.txt
+\echo
+\echo  -------------------- Investigative Question 1: ------------------ 
+\echo
+\i iq1.txt
+\echo
+\echo  -------------------- Investigative Question 2: ------------------ 
+\echo
+\i iq2.txt
+\echo
+\echo  -------------------- Investigative Question 2: ------------------
+\echo
+\i iq3.txt
