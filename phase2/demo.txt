@@ -1,26 +1,264 @@
---loading the schema
-\i schema.ddl 
+---------------------------------
+-- Part (a)
+---------------------------------
 
---loading the data
-\COPY Atheletes(id, name, dob, height, weight) from atheletes.csv with csv
-\COPY Countries from countries_full.csv with csv
-\COPY Performance(id, nationality, sport, gold, silver, bronze) from atheletes.csv with csv 
-\COPY Events from events.csv with csv
+-- load the schema and insert all the data
+=> \i import_data.sql
+
+-- showing command line output sequentially
+psql:schema.ddl:1: NOTICE:  drop cascades to 7 other objects
+DETAIL:  drop cascades to table athletes
+drop cascades to table entities
+drop cascades to table countries
+drop cascades to table events
+drop cascades to table performance
+drop cascades to table athletestmp
+drop cascades to table eventstmp
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+psql:import_data.sql:5: NOTICE:  table "athletestmp" does not exist, skipping
+DROP TABLE
+psql:import_data.sql:6: NOTICE:  table "eventstmp" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+COPY 10858
+COPY 306
+INSERT 0 28
+INSERT 0 200
+COPY 189
+INSERT 0 10858
+INSERT 0 10858
+DROP TABLE
+DROP TABLE
+
+----------------------------------------------------------------------
+
+---------------------------------
+-- Part (b)
+---------------------------------
 
 --getting a description of each table 
-\d Atheletes
-\d Countries
-\d Performance
-\d Events
+=> \d Athletes
 
---showing the number of rows in each table 
-SELECT count(*) FROM Atheletes;
-SELECT count(*) FROM Countries;
-SELECT count(*) FROM Performance;
-SELECT count(*) FROM Events;
+                       Table "olympics.athletes"
+ Column |            Type             | Collation | Nullable | Default
+--------+-----------------------------+-----------+----------+---------
+ id     | integer                     |           | not null |
+ name   | character varying(40)       |           |          |
+ dob    | timestamp without time zone |           | not null |
+ height | double precision            |           | not null |
+ weight | double precision            |           | not null |
+Indexes:
+    "athletes_pkey" PRIMARY KEY, btree (id)
+Check constraints:
+    "athletes_height_check" CHECK (height > 0.0::double precision AND height < 3.0::double precision)
+    "athletes_weight_check" CHECK (weight > 0.0::double precision)
+Referenced by:
+    TABLE "performance" CONSTRAINT "performance_id_fkey" FOREIGN KEY (id) REFERENCES athletes(id)
 
---showing a sample of each table's content
-SELECT * FROM Atheletes;
-SELECT * FROM Countries;
-SELECT * FROM Performance;
-SELECT * FROM Events;
+=> \d Countries
+
+                       Table "olympics.countries"
+     Column     |         Type          | Collation | Nullable | Default
+----------------+-----------------------+-----------+----------+---------
+ country        | character varying(60) |           | not null |
+ code           | character(3)          |           | not null |
+ population     | double precision      |           | not null |
+ gdb_per_capita | double precision      |           | not null |
+Indexes:
+    "countries_pkey" PRIMARY KEY, btree (code)
+    "countries_country_key" UNIQUE CONSTRAINT, btree (country)
+Check constraints:
+    "countries_check" CHECK (population > 0::double precision AND gdp_per_capita > 0.0::double precision)
+Foreign-key constraints:
+    "countries_code_fkey" FOREIGN KEY (code) REFERENCES entities(code)
+
+=> \d Performance
+
+                     Table "olympics.performance"
+   Column    |         Type          | Collation | Nullable | Default
+-------------+-----------------------+-----------+----------+---------
+ id          | integer               |           | not null |
+ nationality | character(3)          |           | not null |
+ sport       | character varying(35) |           | not null |
+ gold        | integer               |           | not null |
+ silver      | integer               |           | not null |
+ bronze      | integer               |           | not null |
+Indexes:
+    "performance_pkey" PRIMARY KEY, btree (id)
+Check constraints:
+    "performance_check" CHECK (gold >= 0 AND silver >= 0 AND bronze >= 0)
+Foreign-key constraints:
+    "performance_id_fkey" FOREIGN KEY (id) REFERENCES athletes(id)
+    "performance_sport_fkey" FOREIGN KEY (sport) REFERENCES events(sport)
+
+=> \d Entities
+
+               Table "olympics.entities"
+ Column |     Type     | Collation | Nullable | Default
+--------+--------------+-----------+----------+---------
+ code   | character(3) |           | not null |
+Indexes:
+    "entities_pkey" PRIMARY KEY, btree (code)
+Referenced by:
+    TABLE "countries" CONSTRAINT "countries_code_fkey" FOREIGN KEY (code) REFERENCES entities(code)
+
+=> \d Events
+
+                     Table "olympics.events"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ sport  | character varying(35) |           | not null |
+Indexes:
+    "events_pkey" PRIMARY KEY, btree (sport)
+Referenced by:
+    TABLE "performance" CONSTRAINT "performance_sport_fkey" FOREIGN KEY (sport) REFERENCES events(sport)
+
+----------------------------------------------------------------------
+
+---------------------------------
+-- Part (c)
+---------------------------------
+
+-- showing the number of rows in each table
+=> SELECT count(*) FROM Athletes;
+
+ count
+-------
+ 10858
+(1 row)
+
+=> SELECT count(*) FROM Countries;
+
+ count
+-------
+   189
+(1 row)
+
+=> SELECT count(*) FROM Performance;
+
+ count
+-------
+ 10858
+(1 row)
+
+=> SELECT count(*) FROM Entities;
+
+ count
+-------
+   200
+(1 row)
+
+=> SELECT count(*) FROM Events;
+
+ count
+-------
+    28
+(1 row)
+
+----------------------------------------------------------------------
+
+---------------------------------
+-- Part (d)
+---------------------------------
+
+-- showing a sample of each table's content
+=> SELECT * FROM Athletes
+-> WHERE height > 2.00 and weight < 90
+-> ORDER BY height DESC;
+
+    id     |             name              |         dob         | height | weight
+-----------+-------------------------------+---------------------+--------+--------
+ 905417640 | Kevin Cordes                  | 1993-08-13 00:00:00 |   2.21 |     88
+ 334169879 | Abd Elhalim Mohamed Abou      | 1989-06-03 00:00:00 |    2.1 |     88
+ 736895804 | Clark Smith                   | 1995-04-17 00:00:00 |   2.06 |     89
+ 652295351 | Mateusz Mika                  | 1991-01-21 00:00:00 |   2.06 |     86
+ 594052376 | Bartosz Kurek                 | 1988-08-29 00:00:00 |   2.05 |     87
+ 790224130 | Mojtaba Mirzajanpour M.       | 1991-10-07 00:00:00 |   2.05 |     88
+ 435088187 | Majd Eddin Ghazal             | 1987-04-21 00:00:00 |   2.05 |     72
+ 775280640 | Mostafa Sharifat              | 1987-09-16 00:00:00 |   2.04 |     85
+ 925589540 | Linet Arasa                   | 1996-01-01 00:00:00 |   2.03 |     61
+ 862783506 | Seyed Mohammad Mousavi Eraghi | 1987-08-22 00:00:00 |   2.03 |     86
+ 632477118 | Rafael Castillo               | 1993-08-12 00:00:00 |   2.02 |     87
+ 976263519 | Daria Malygina                | 1994-04-04 00:00:00 |   2.02 |     82
+ 174463586 | Guowei Zhang                  | 1991-06-04 00:00:00 |   2.02 |     77
+ 800654428 | Pablo Crer                    | 1989-06-12 00:00:00 |   2.02 |     85
+ 402969291 | Bartosz Bednorz               | 1994-07-25 00:00:00 |   2.01 |     84
+ 260382082 | Yannick Agnel                 | 1992-06-09 00:00:00 |   2.01 |     80
+ 429546103 | Xinyue Yuan                   | 1996-12-21 00:00:00 |   2.01 |     78
+ 682481814 | Konstadinos Baniotis          | 1986-11-06 00:00:00 |   2.01 |     80
+ 999580644 | Karol Klos                    | 1989-08-08 00:00:00 |   2.01 |     87
+ 894060489 | Dimitry Volkov                | 1995-05-25 00:00:00 |   2.01 |     88
+ 442704681 | Marko Bijac                   | 1991-01-12 00:00:00 |   2.01 |     85
+ 440461124 | David Smith                   | 1985-05-15 00:00:00 |   2.01 |     86
+(22 rows)
+
+=> SELECT * FROM Countries
+-> WHERE gdp_per_capita > 70000;
+
+    country     | code | population |  gdp_per_capita
+----------------+------+------------+------------------
+ Bermuda        | BER  |      65235 |        106885.88
+ Cayman Islands | CAY  |      59967 |         78471.63
+ Liechtenstein  | LIE  |      37531 |        165642.39
+ Luxembourg     | LUX  |     569676 | 101449.968168042
+ Monaco         | MON  |      37731 |        170028.66
+ Norway         | NOR  |    5195921 | 74400.3697770928
+ Qatar          | QAT  |    2235355 | 73653.3944346574
+ Switzerland    | SUI  |    8286976 | 80945.0792194742
+(8 rows)
+
+
+=> SELECT * FROM Performance
+-> WHERE gold >= 3
+-> ORDER BY gold DESC;
+
+    id     | nationality |   sport    | gold | silver | bronze
+-----------+-------------+------------+------+--------+--------
+ 491565031 | USA         | aquatics   |    5 |      1 |      0
+ 960103057 | USA         | aquatics   |    4 |      1 |      0
+ 770111957 | USA         | gymnastics |    4 |      0 |      1
+ 237391684 | USA         | aquatics   |    3 |      0 |      0
+ 552666305 | HUN         | canoe      |    3 |      0 |      0
+ 579416064 | JAM         | athletics  |    3 |      0 |      0
+ 441111357 | GBR         | cycling    |    3 |      0 |      0
+ 643664378 | HUN         | aquatics   |    3 |      1 |      0
+(8 rows)
+
+=> SELECT * FROM Entities
+-> WHERE code NOT IN (SELECT code FROM Countries);
+
+ code
+------
+ IOA
+ KIR
+ KOS
+ MHL
+ MNE
+ ROT
+ ROU
+ SRB
+ SSD
+ TTO
+ TUV
+(11 rows)
+
+
+=> SELECT * FROM Events
+-> ORDER BY sport LIMIT 5;
+
+   sport
+------------
+ aquatics
+ archery
+ athletics
+ badminton
+ basketball
+(5 rows)

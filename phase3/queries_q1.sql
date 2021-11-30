@@ -14,7 +14,8 @@ CREATE TABLE q1 (
     total INT
 );
 -- Define Views
-DROP VIEW IF EXISTS IntermediateView CASCADE;
+DROP VIEW IF EXISTS numMedals CASCADE;
+DROP VIEW IF EXISTS countrygdp CASCADE;
 
 -- number of each types of medals won by each country
 CREATE VIEW numMedals AS 
