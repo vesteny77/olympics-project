@@ -14,8 +14,21 @@ CREATE TABLE q1 (
     total INT
 );
 -- Define Views
-DROP VIEW IF EXISTS IntermediateView CASCADE;
+DROP VIEW IF EXISTS numMedals CASCADE;
+DROP VIEW IF EXISTS countrygdp CASCADE;
 
-CREATE VIEW IntermediateView;
+-- number of each types of medals won by each country
+CREATE VIEW numMedals AS 
+    SELECT nationality, sum(gold) as numGold, sum(silver) as numSilver, sum(bronze) as numBronze
+    FROM performance
+    GROUP BY nationality;
+
+CREATE VIEW countrygdp AS
+    SELECT country, gdp_per_capita, (gdp_per_capita * population) as gdp, numGold, numSilver, numBronze, 
+        (numGold + numSilver + numBronze) as total
+    FROM countries, numMedals
+    WHERE countries.code = numMedals.nationality
+    ORDER BY total DESC;
 
 -- Output Results
+insert into q1 select * from countrygdp;
