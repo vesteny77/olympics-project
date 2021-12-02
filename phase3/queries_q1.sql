@@ -21,7 +21,7 @@ DROP VIEW IF EXISTS countrygdp CASCADE;
 CREATE VIEW numMedals AS 
     SELECT nationality, sum(gold) as numGold, sum(silver) as numSilver, sum(bronze) as numBronze
     FROM performance
-    GROUP BY nationality ;
+    GROUP BY nationality;
 
 CREATE VIEW countrygdp AS
     SELECT country, gdp_per_capita, (gdp_per_capita * population) as gdp, numGold, numSilver, numBronze, 
