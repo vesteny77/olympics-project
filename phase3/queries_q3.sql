@@ -3,7 +3,7 @@
 -- 2) most likely to obtain more medals than other countries?
 
 SET SEARCH_PATH TO Olympics;
-DROP TABLE IF EXISTS q1 CASCADE;
+DROP TABLE IF EXISTS q3 CASCADE;
 
 CREATE TABLE q3 (
     country VARCHAR(60),
