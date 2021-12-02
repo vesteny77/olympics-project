@@ -1,0 +1,47 @@
+sport,country,num_medals
+aquatics,USA,88
+archery,KOR,9
+athletics,USA,45
+badminton,CHN,5
+badminton,MAS,5
+basketball,ESP,24
+basketball,USA,24
+basketball,SRB,24
+boxing,,0
+canoe,GER,16
+cycling,GBR,20
+equestrian,GER,15
+fencing,RUS,15
+football,GER,36
+golf,USA,1
+golf,KOR,1
+golf,GBR,1
+golf,CHN,1
+golf,SWE,1
+golf,NZL,1
+gymnastics,RUS,23
+handball,FRA,30
+hockey,GER,33
+judo,JPN,12
+modern pentathlon,POL,1
+modern pentathlon,RUS,1
+modern pentathlon,UKR,1
+modern pentathlon,FRA,1
+modern pentathlon,MEX,1
+modern pentathlon,AUS,1
+rowing,GBR,26
+rugby sevens,FIJ,13
+rugby sevens,RSA,13
+sailing,AUS,7
+sailing,NZL,7
+shooting,ITA,7
+shooting,CHN,7
+table tennis,CHN,10
+taekwondo,KOR,5
+tennis,USA,5
+tennis,CZE,5
+triathlon,GBR,3
+volleyball,USA,26
+weightlifting,CHN,7
+wrestling,AZE,9
+wrestling,RUS,9
