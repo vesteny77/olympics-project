@@ -24,9 +24,11 @@ CREATE VIEW numMedals AS
     GROUP BY nationality ;
 
 CREATE VIEW countrygdp AS
-    SELECT country, gdp_per_capita, (gdp_per_capita * population) as gdp, numGold, numSilver, numBronze
+    SELECT country, gdp_per_capita, (gdp_per_capita * population) as gdp, numGold, numSilver, numBronze, 
+        (numGold + numSilver + numBronze) as total
     FROM countries, numMedals
-    WHERE countries.code = numMedals.nationality;  
+    WHERE countries.code = numMedals.nationality
+    ORDER BY total DESC;
 
 -- Output Results
 insert into q1 select * from countrygdp;
