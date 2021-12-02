@@ -19,7 +19,7 @@ DROP VIEW IF EXISTS countrygdp CASCADE;
 
 -- number of each types of medals won by each country
 CREATE VIEW numMedals AS 
-    SELECT nationality, count(gold) as numGold, count(silver) as numSilver, count(bronze) as numBronze
+    SELECT nationality, sum(gold) as numGold, sum(silver) as numSilver, sum(bronze) as numBronze
     FROM performance
     GROUP BY nationality ;
 
