@@ -1,0 +1,232 @@
+-- We have limited the number of rows of the output to 10.
+
+-------------------- Loading schema and data: --------------------
+\i import_data.sql
+
+psql:schema.ddl:1: NOTICE:  drop cascades to 23 other objects
+DETAIL:  drop cascades to table athletes
+drop cascades to table entities
+drop cascades to table countries
+drop cascades to table events
+drop cascades to table performance
+drop cascades to table q1
+drop cascades to view nummedals
+drop cascades to view countrygdp
+drop cascades to table q2_age
+drop cascades to table q2_weight
+drop cascades to table q2_height
+drop cascades to view athleteperformanceage
+drop cascades to view athleteperformanceheight
+drop cascades to view athleteperformanceweight
+drop cascades to view athleteperformanceaquaticsage
+drop cascades to view athleteperformanceaquaticsweight
+drop cascades to view athleteperformanceaquaticsheight
+drop cascades to view athleteperformancetabletennisage
+drop cascades to view athleteperformancetabletennisweight
+drop cascades to view athleteperformancetabletennisheight
+drop cascades to view athleteperformancevolleyballage
+drop cascades to view athleteperformancevolleyballweight
+drop cascades to view athleteperformancevolleyballheight
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+psql:import_data.sql:5: NOTICE:  table "athletestmp" does not exist, skipping
+DROP TABLE
+psql:import_data.sql:6: NOTICE:  table "eventstmp" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+COPY 10858
+COPY 306
+INSERT 0 28
+INSERT 0 200
+COPY 189
+INSERT 0 10858
+INSERT 0 10858
+DROP TABLE
+DROP TABLE
+
+-------------------- Investigative Question 1: ------------------
+
+queries_q1.sql
+
+SET
+psql:queries_q1.sql:5: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:queries_q1.sql:17: NOTICE:  view "nummedals" does not exist, skipping
+DROP VIEW
+psql:queries_q1.sql:18: NOTICE:  view "countrygdp" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 189
+
+SET
+    country     |  gdp_per_capita  |       gdp        | gold | silver | bronze | total
+----------------+------------------+------------------+------+--------+--------+-------
+ United States  | 56115.7184261955 |   18036648000000 |  136 |     52 |     70 |   258
+ Germany        | 41313.3139945434 | 3363446822668.29 |   49 |     44 |     66 |   159
+ United Kingdom | 43875.9696143686 | 2858003087965.69 |   63 |     54 |     24 |   141
+ China          | 8027.68381013907 | 11007720594138.9 |   46 |     29 |     34 |   109
+ Russia         | 9092.58053606884 | 1310211868100.77 |   51 |     25 |     31 |   107
+ France         | 36205.5681017036 | 2418835532882.33 |   18 |     52 |     19 |    89
+ Australia      | 56310.9629933721 | 1339140527498.13 |   23 |     34 |     25 |    82
+ Italy          | 29957.8043154372 | 1821496964400.58 |    8 |     40 |     24 |    72
+ Canada         |  43248.529909341 | 1550536520141.93 |    4 |      4 |     61 |    69
+ Japan          | 32477.2151449234 | 4123257609614.73 |   17 |     13 |     35 |    65
+(10 rows)
+
+
+-------------------- Investigative Question 2: ------------------
+
+\i queries_q2.sql
+
+SET
+psql:queries_q2.sql:6: NOTICE:  table "q2_age" does not exist, skipping
+DROP TABLE
+psql:queries_q2.sql:7: NOTICE:  table "q2_weight" does not exist, skipping
+DROP TABLE
+psql:queries_q2.sql:8: NOTICE:  table "q2_height" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+psql:queries_q2.sql:29: NOTICE:  view "athleteperformanceage" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:30: NOTICE:  view "athleteperformanceheight" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:31: NOTICE:  view "athleteperformanceweight" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:32: NOTICE:  view "athleteperformanceaquaticsage" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:33: NOTICE:  view "athleteperformancetabletennisage" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:34: NOTICE:  view "athleteperformancevolleyballage" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:35: NOTICE:  view "athleteperformanceaquaticsweight" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:36: NOTICE:  view "athleteperformancetabletennisweight" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:37: NOTICE:  view "athleteperformancevolleyballweight" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:38: NOTICE:  view "athleteperformanceaquaticsheight" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:39: NOTICE:  view "athleteperformancetabletennisheight" does not exist, skipping
+DROP VIEW
+psql:queries_q2.sql:40: NOTICE:  view "athleteperformancevolleyballheight" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+
+SET
+    sport     | age | total
+--------------+-----+-------
+ aquatics     |  22 |    45
+ table tennis |  28 |     8
+ volleyball   |  28 |     9
+(3 rows)
+
+
+SET
+    sport     | height | total
+--------------+--------+-------
+ aquatics     |   1.76 |    19
+ table tennis |    1.7 |     2
+ volleyball   |   1.98 |     7
+(3 rows)
+
+
+SET
+    sport     | weight | total
+--------------+--------+-------
+ aquatics     |     72 |    19
+ table tennis |     63 |     4
+ volleyball   |     75 |     9
+(3 rows)
+
+
+-------------------- Investigative Question 3: ------------------
+
+\i queries_q3.sql
+
+SET
+psql:queries_q3.sql:6: NOTICE:  table "q3a" does not exist, skipping
+DROP TABLE
+psql:queries_q3.sql:7: NOTICE:  table "q3b" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+psql:queries_q3.sql:22: NOTICE:  view "totalpersport" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:23: NOTICE:  view "aggtps" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:24: NOTICE:  view "best" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 208
+INSERT 0 46
+
+SET
+ country |     sport     | num_medals
+---------+---------------+------------
+ AFG     |               |          0
+ ALB     |               |          0
+ ALG     | athletics     |          2
+ AND     |               |          0
+ ANG     |               |          0
+ ANT     |               |          0
+ ARG     | hockey        |         18
+ ARM     | wrestling     |          2
+ ARM     | weightlifting |          2
+ ARU     |               |          0
+(10 rows)
+
+
+SET
+   sport    | country | num_medals
+------------+---------+------------
+ aquatics   | USA     |         88
+ archery    | KOR     |          9
+ athletics  | USA     |         45
+ badminton  | CHN     |          5
+ badminton  | MAS     |          5
+ basketball | ESP     |         24
+ basketball | USA     |         24
+ basketball | SRB     |         24
+ boxing     |         |          0
+ canoe      | GER     |         16
+(10 rows)

@@ -1,0 +1,637 @@
+age,sport,gold,silver,bronze,total
+22,aquatics,16,13,16,45
+23,aquatics,11,13,16,40
+21,aquatics,14,12,4,30
+27,aquatics,8,9,9,26
+26,aquatics,5,13,5,23
+20,aquatics,9,4,10,23
+25,aquatics,7,7,8,22
+31,aquatics,9,5,4,18
+19,aquatics,10,4,3,17
+24,aquatics,6,7,4,17
+28,aquatics,5,6,5,16
+29,aquatics,4,4,7,15
+30,aquatics,4,4,4,12
+16,aquatics,1,1,4,6
+18,aquatics,2,2,2,6
+32,aquatics,1,2,2,5
+34,aquatics,1,1,1,3
+33,aquatics,2,0,1,3
+36,aquatics,0,2,0,2
+37,aquatics,0,1,1,2
+35,aquatics,2,0,0,2
+15,aquatics,1,0,0,1
+17,aquatics,1,0,0,1
+41,aquatics,0,0,0,0
+39,aquatics,0,0,0,0
+14,aquatics,0,0,0,0
+40,aquatics,0,0,0,0
+38,aquatics,0,0,0,0
+28,archery,1,3,2,6
+23,archery,2,0,2,4
+20,archery,1,1,1,3
+27,archery,0,2,0,2
+21,archery,1,1,0,2
+26,archery,0,1,1,2
+29,archery,2,0,0,2
+25,archery,0,0,2,2
+24,archery,1,0,0,1
+44,archery,0,0,0,0
+38,archery,0,0,0,0
+35,archery,0,0,0,0
+22,archery,0,0,0,0
+30,archery,0,0,0,0
+37,archery,0,0,0,0
+17,archery,0,0,0,0
+36,archery,0,0,0,0
+39,archery,0,0,0,0
+42,archery,0,0,0,0
+32,archery,0,0,0,0
+19,archery,0,0,0,0
+18,archery,0,0,0,0
+31,archery,0,0,0,0
+33,archery,0,0,0,0
+34,archery,0,0,0,0
+24,athletics,7,8,6,21
+26,athletics,10,4,6,20
+30,athletics,5,7,5,17
+27,athletics,4,7,6,17
+22,athletics,7,5,4,16
+25,athletics,6,6,4,16
+31,athletics,7,2,3,12
+28,athletics,3,4,4,11
+32,athletics,3,3,4,10
+33,athletics,4,3,2,9
+21,athletics,2,2,4,8
+23,athletics,1,3,3,7
+29,athletics,1,1,3,5
+34,athletics,2,3,0,5
+20,athletics,1,1,2,4
+37,athletics,1,1,0,2
+35,athletics,0,0,1,1
+40,athletics,0,1,0,1
+38,athletics,0,0,1,1
+44,athletics,0,0,0,0
+41,athletics,0,0,0,0
+42,athletics,0,0,0,0
+16,athletics,0,0,0,0
+17,athletics,0,0,0,0
+39,athletics,0,0,0,0
+18,athletics,0,0,0,0
+43,athletics,0,0,0,0
+36,athletics,0,0,0,0
+19,athletics,0,0,0,0
+27,badminton,1,3,1,5
+26,badminton,2,0,2,4
+21,badminton,0,1,1,2
+22,badminton,0,0,2,2
+30,badminton,0,1,1,2
+34,badminton,0,1,0,1
+24,badminton,1,0,0,1
+29,badminton,1,0,0,1
+32,badminton,1,0,0,1
+23,badminton,1,0,0,1
+31,badminton,1,0,0,1
+28,badminton,0,1,0,1
+33,badminton,0,1,0,1
+25,badminton,0,0,0,0
+19,badminton,0,0,0,0
+38,badminton,0,0,0,0
+40,badminton,0,0,0,0
+35,badminton,0,0,0,0
+20,badminton,0,0,0,0
+36,badminton,0,0,0,0
+27,basketball,4,4,4,12
+26,basketball,5,2,2,9
+30,basketball,2,2,3,7
+28,basketball,3,2,1,6
+25,basketball,0,3,2,5
+29,basketball,0,3,2,5
+36,basketball,1,0,3,4
+24,basketball,2,2,0,4
+34,basketball,2,0,1,3
+22,basketball,1,1,1,3
+21,basketball,0,2,1,3
+31,basketball,1,0,1,2
+32,basketball,2,0,0,2
+37,basketball,1,1,0,2
+20,basketball,0,1,1,2
+35,basketball,0,0,1,1
+23,basketball,0,0,1,1
+33,basketball,0,1,0,1
+38,basketball,0,0,0,0
+39,basketball,0,0,0,0
+29,canoe,4,2,4,10
+27,canoe,4,3,2,9
+28,canoe,2,3,3,8
+24,canoe,2,2,3,7
+23,canoe,3,1,2,6
+34,canoe,2,2,1,5
+33,canoe,2,2,1,5
+22,canoe,1,2,2,5
+35,canoe,0,2,2,4
+31,canoe,0,1,3,4
+32,canoe,2,1,1,4
+30,canoe,3,0,0,3
+25,canoe,1,1,1,3
+21,canoe,0,2,1,3
+26,canoe,0,1,1,2
+37,canoe,0,1,0,1
+20,canoe,0,1,0,1
+36,canoe,1,0,0,1
+19,canoe,0,0,1,1
+18,canoe,0,0,0,0
+39,canoe,0,0,0,0
+38,canoe,0,0,0,0
+40,canoe,0,0,0,0
+25,cycling,2,7,2,11
+24,cycling,5,2,3,10
+28,cycling,5,0,2,7
+22,cycling,4,2,1,7
+26,cycling,2,1,4,7
+31,cycling,2,3,2,7
+23,cycling,1,2,3,6
+30,cycling,2,0,3,5
+27,cycling,1,2,2,5
+33,cycling,0,4,1,5
+35,cycling,1,0,1,2
+20,cycling,0,2,0,2
+19,cycling,0,1,1,2
+36,cycling,1,0,1,2
+21,cycling,0,1,0,1
+43,cycling,1,0,0,1
+18,cycling,0,0,1,1
+32,cycling,0,0,1,1
+29,cycling,0,0,1,1
+39,cycling,0,0,0,0
+40,cycling,0,0,0,0
+34,cycling,0,0,0,0
+41,cycling,0,0,0,0
+38,cycling,0,0,0,0
+45,cycling,0,0,0,0
+37,cycling,0,0,0,0
+36,equestrian,2,1,0,3
+30,equestrian,1,1,1,3
+35,equestrian,0,0,2,2
+34,equestrian,1,1,0,2
+41,equestrian,1,1,0,2
+42,equestrian,1,0,1,2
+44,equestrian,0,1,1,2
+31,equestrian,1,1,0,2
+43,equestrian,0,1,1,2
+29,equestrian,0,0,2,2
+27,equestrian,1,1,0,2
+37,equestrian,0,0,1,1
+32,equestrian,1,0,0,1
+28,equestrian,0,1,0,1
+22,equestrian,1,0,0,1
+40,equestrian,0,1,0,1
+24,equestrian,0,1,0,1
+21,equestrian,0,0,0,0
+25,equestrian,0,0,0,0
+39,equestrian,0,0,0,0
+20,equestrian,0,0,0,0
+18,equestrian,0,0,0,0
+46,equestrian,0,0,0,0
+38,equestrian,0,0,0,0
+26,equestrian,0,0,0,0
+45,equestrian,0,0,0,0
+33,equestrian,0,0,0,0
+23,equestrian,0,0,0,0
+26,fencing,2,4,3,9
+24,fencing,2,4,2,8
+28,fencing,3,0,3,6
+23,fencing,2,3,1,6
+31,fencing,3,1,2,6
+25,fencing,1,2,1,4
+33,fencing,0,1,3,4
+32,fencing,3,0,1,4
+34,fencing,1,2,0,3
+27,fencing,1,1,1,3
+29,fencing,1,1,0,2
+22,fencing,0,1,1,2
+42,fencing,0,1,1,2
+36,fencing,0,0,2,2
+21,fencing,1,0,0,1
+39,fencing,0,0,1,1
+38,fencing,1,0,0,1
+30,fencing,0,1,0,1
+17,fencing,0,0,0,0
+35,fencing,0,0,0,0
+18,fencing,0,0,0,0
+37,fencing,0,0,0,0
+19,fencing,0,0,0,0
+40,fencing,0,0,0,0
+16,fencing,0,0,0,0
+20,fencing,0,0,0,0
+21,football,3,7,4,14
+22,football,6,4,1,11
+23,football,5,5,1,11
+28,football,4,2,1,7
+24,football,4,1,1,6
+25,football,4,2,0,6
+27,football,1,3,1,5
+20,football,1,4,0,5
+31,football,3,1,0,4
+29,football,1,2,1,4
+32,football,0,2,1,3
+30,football,1,0,2,3
+33,football,0,1,1,2
+19,football,2,0,0,2
+34,football,1,0,1,2
+26,football,0,2,0,2
+17,football,0,0,1,1
+18,football,0,0,1,1
+35,football,0,0,1,1
+41,football,0,0,0,0
+38,football,0,0,0,0
+16,football,0,0,0,0
+38,golf,0,0,1,1
+28,golf,1,0,0,1
+36,golf,1,0,0,1
+40,golf,0,1,0,1
+27,golf,0,0,1,1
+19,golf,0,1,0,1
+23,golf,0,0,0,0
+29,golf,0,0,0,0
+42,golf,0,0,0,0
+41,golf,0,0,0,0
+34,golf,0,0,0,0
+22,golf,0,0,0,0
+32,golf,0,0,0,0
+24,golf,0,0,0,0
+20,golf,0,0,0,0
+39,golf,0,0,0,0
+26,golf,0,0,0,0
+46,golf,0,0,0,0
+30,golf,0,0,0,0
+18,golf,0,0,0,0
+33,golf,0,0,0,0
+37,golf,0,0,0,0
+25,golf,0,0,0,0
+21,golf,0,0,0,0
+43,golf,0,0,0,0
+35,golf,0,0,0,0
+31,golf,0,0,0,0
+45,golf,0,0,0,0
+44,golf,0,0,0,0
+22,gymnastics,3,5,5,13
+19,gymnastics,7,3,2,12
+24,gymnastics,0,5,4,9
+23,gymnastics,4,1,3,8
+27,gymnastics,4,3,1,8
+20,gymnastics,1,1,5,7
+21,gymnastics,3,3,1,7
+25,gymnastics,2,2,2,6
+17,gymnastics,0,1,4,5
+26,gymnastics,1,2,2,5
+16,gymnastics,1,2,0,3
+28,gymnastics,1,0,1,2
+18,gymnastics,1,1,0,2
+29,gymnastics,1,0,0,1
+31,gymnastics,1,0,0,1
+30,gymnastics,0,1,0,1
+32,gymnastics,0,0,0,0
+33,gymnastics,0,0,0,0
+34,gymnastics,0,0,0,0
+35,gymnastics,0,0,0,0
+36,gymnastics,0,0,0,0
+41,gymnastics,0,0,0,0
+30,handball,3,4,3,10
+25,handball,2,4,3,9
+32,handball,4,3,1,8
+28,handball,3,3,1,7
+27,handball,3,1,2,6
+26,handball,2,2,1,5
+31,handball,2,2,0,4
+21,handball,2,1,1,4
+29,handball,3,1,0,4
+23,handball,0,2,1,3
+24,handball,0,2,1,3
+34,handball,2,1,0,3
+22,handball,0,1,1,2
+20,handball,0,1,0,1
+40,handball,0,1,0,1
+33,handball,1,0,0,1
+37,handball,0,1,0,1
+36,handball,1,0,0,1
+35,handball,1,0,0,1
+44,handball,0,0,0,0
+19,handball,0,0,0,0
+38,handball,0,0,0,0
+39,handball,0,0,0,0
+29,hockey,2,5,6,13
+28,hockey,4,4,2,10
+22,hockey,2,3,4,9
+26,hockey,3,5,1,9
+31,hockey,7,1,1,9
+27,hockey,2,4,2,8
+25,hockey,1,5,2,8
+24,hockey,4,0,3,7
+21,hockey,0,1,4,5
+32,hockey,2,0,2,4
+23,hockey,0,2,1,3
+30,hockey,1,1,1,3
+19,hockey,0,0,3,3
+34,hockey,2,0,0,2
+35,hockey,2,0,0,2
+20,hockey,0,0,1,1
+37,hockey,1,0,0,1
+36,hockey,1,0,0,1
+33,hockey,0,1,0,1
+18,hockey,0,0,0,0
+26,judo,4,2,4,10
+24,judo,2,3,3,8
+25,judo,1,3,4,8
+30,judo,2,2,3,7
+29,judo,1,0,5,6
+27,judo,1,2,3,6
+22,judo,2,2,0,4
+23,judo,1,0,3,4
+21,judo,0,0,1,1
+32,judo,0,0,1,1
+31,judo,0,0,1,1
+20,judo,0,0,0,0
+19,judo,0,0,0,0
+35,judo,0,0,0,0
+39,judo,0,0,0,0
+28,judo,0,0,0,0
+37,judo,0,0,0,0
+36,judo,0,0,0,0
+34,judo,0,0,0,0
+33,judo,0,0,0,0
+25,modern pentathlon,1,0,1,2
+26,modern pentathlon,0,0,1,1
+30,modern pentathlon,0,1,0,1
+28,modern pentathlon,1,0,0,1
+27,modern pentathlon,0,1,0,1
+19,modern pentathlon,0,0,0,0
+24,modern pentathlon,0,0,0,0
+17,modern pentathlon,0,0,0,0
+21,modern pentathlon,0,0,0,0
+20,modern pentathlon,0,0,0,0
+32,modern pentathlon,0,0,0,0
+22,modern pentathlon,0,0,0,0
+35,modern pentathlon,0,0,0,0
+37,modern pentathlon,0,0,0,0
+31,modern pentathlon,0,0,0,0
+29,modern pentathlon,0,0,0,0
+23,modern pentathlon,0,0,0,0
+28,rowing,9,10,2,21
+27,rowing,7,4,5,16
+31,rowing,6,5,2,13
+29,rowing,2,6,4,12
+26,rowing,4,5,3,12
+25,rowing,4,3,4,11
+30,rowing,4,1,4,9
+32,rowing,2,3,3,8
+34,rowing,1,3,2,6
+22,rowing,1,1,4,6
+23,rowing,1,2,3,6
+24,rowing,0,1,4,5
+33,rowing,3,1,1,5
+37,rowing,2,0,1,3
+36,rowing,0,2,0,2
+35,rowing,1,0,0,1
+41,rowing,0,1,0,1
+21,rowing,0,0,1,1
+38,rowing,1,0,0,1
+20,rowing,0,0,1,1
+40,rowing,0,0,0,0
+18,rowing,0,0,0,0
+44,rowing,0,0,0,0
+39,rowing,0,0,0,0
+42,rowing,0,0,0,0
+19,rowing,0,0,0,0
+28,rugby sevens,5,4,5,14
+24,rugby sevens,2,3,4,9
+23,rugby sevens,3,1,5,9
+27,rugby sevens,3,2,3,8
+25,rugby sevens,2,5,0,7
+26,rugby sevens,2,2,1,5
+21,rugby sevens,3,1,0,4
+29,rugby sevens,0,0,4,4
+22,rugby sevens,2,1,0,3
+30,rugby sevens,1,1,1,3
+20,rugby sevens,0,1,2,3
+32,rugby sevens,1,2,0,3
+31,rugby sevens,1,0,0,1
+19,rugby sevens,0,1,0,1
+35,rugby sevens,0,0,0,0
+18,rugby sevens,0,0,0,0
+34,rugby sevens,0,0,0,0
+33,rugby sevens,0,0,0,0
+36,rugby sevens,0,0,0,0
+25,sailing,3,2,2,7
+30,sailing,3,3,1,7
+28,sailing,3,2,2,7
+27,sailing,1,1,2,4
+26,sailing,1,1,1,3
+32,sailing,1,0,1,2
+23,sailing,0,1,1,2
+31,sailing,0,0,2,2
+29,sailing,1,1,0,2
+34,sailing,0,1,0,1
+41,sailing,0,1,0,1
+22,sailing,0,0,1,1
+24,sailing,0,1,0,1
+37,sailing,1,0,0,1
+19,sailing,0,0,1,1
+35,sailing,0,0,1,1
+36,sailing,0,1,0,1
+17,sailing,0,0,0,0
+18,sailing,0,0,0,0
+38,sailing,0,0,0,0
+40,sailing,0,0,0,0
+39,sailing,0,0,0,0
+33,sailing,0,0,0,0
+43,sailing,0,0,0,0
+21,sailing,0,0,0,0
+20,sailing,0,0,0,0
+45,sailing,0,0,0,0
+44,sailing,0,0,0,0
+29,shooting,3,1,0,4
+34,shooting,1,2,1,4
+31,shooting,0,1,2,3
+33,shooting,2,0,1,3
+27,shooting,0,1,2,3
+20,shooting,1,1,1,3
+42,shooting,1,1,0,2
+38,shooting,0,2,0,2
+30,shooting,0,0,2,2
+21,shooting,1,1,0,2
+28,shooting,1,1,0,2
+24,shooting,0,1,1,2
+37,shooting,1,0,1,2
+26,shooting,1,1,0,2
+22,shooting,0,0,2,2
+23,shooting,0,1,0,1
+19,shooting,1,0,0,1
+46,shooting,0,1,0,1
+25,shooting,1,0,0,1
+17,shooting,0,0,0,0
+41,shooting,0,0,0,0
+45,shooting,0,0,0,0
+44,shooting,0,0,0,0
+18,shooting,0,0,0,0
+35,shooting,0,0,0,0
+40,shooting,0,0,0,0
+43,shooting,0,0,0,0
+36,shooting,0,0,0,0
+16,shooting,0,0,0,0
+39,shooting,0,0,0,0
+32,shooting,0,0,0,0
+28,table tennis,4,2,2,8
+26,table tennis,3,0,0,3
+22,table tennis,0,2,1,3
+35,table tennis,0,0,2,2
+23,table tennis,0,1,1,2
+27,table tennis,0,1,1,2
+33,table tennis,0,2,0,2
+16,table tennis,0,0,1,1
+25,table tennis,1,0,0,1
+37,table tennis,0,0,0,0
+38,table tennis,0,0,0,0
+20,table tennis,0,0,0,0
+21,table tennis,0,0,0,0
+24,table tennis,0,0,0,0
+31,table tennis,0,0,0,0
+19,table tennis,0,0,0,0
+36,table tennis,0,0,0,0
+43,table tennis,0,0,0,0
+41,table tennis,0,0,0,0
+32,table tennis,0,0,0,0
+39,table tennis,0,0,0,0
+30,table tennis,0,0,0,0
+40,table tennis,0,0,0,0
+42,table tennis,0,0,0,0
+34,table tennis,0,0,0,0
+29,table tennis,0,0,0,0
+22,taekwondo,2,1,4,7
+23,taekwondo,1,2,2,5
+25,taekwondo,0,2,2,4
+18,taekwondo,0,2,1,3
+24,taekwondo,0,0,2,2
+27,taekwondo,1,0,1,2
+21,taekwondo,1,0,1,2
+20,taekwondo,1,0,1,2
+28,taekwondo,1,0,0,1
+29,taekwondo,0,1,0,1
+30,taekwondo,0,0,1,1
+19,taekwondo,0,0,1,1
+36,taekwondo,0,0,0,0
+35,taekwondo,0,0,0,0
+26,taekwondo,0,0,0,0
+32,taekwondo,0,0,0,0
+17,taekwondo,0,0,0,0
+33,taekwondo,0,0,0,0
+34,taekwondo,0,0,0,0
+38,taekwondo,0,0,0,0
+31,tennis,1,2,1,4
+28,tennis,1,2,0,3
+30,tennis,2,0,1,3
+27,tennis,0,1,2,3
+24,tennis,1,0,1,2
+29,tennis,1,0,1,2
+36,tennis,0,2,0,2
+38,tennis,0,0,1,1
+23,tennis,1,0,0,1
+26,tennis,0,0,1,1
+34,tennis,1,0,0,1
+32,tennis,0,0,0,0
+35,tennis,0,0,0,0
+22,tennis,0,0,0,0
+19,tennis,0,0,0,0
+43,tennis,0,0,0,0
+33,tennis,0,0,0,0
+39,tennis,0,0,0,0
+20,tennis,0,0,0,0
+21,tennis,0,0,0,0
+25,tennis,0,0,0,0
+40,tennis,0,0,0,0
+44,tennis,0,0,0,0
+30,triathlon,1,0,1,2
+25,triathlon,0,0,1,1
+34,triathlon,0,1,0,1
+26,triathlon,0,1,0,1
+28,triathlon,1,0,0,1
+31,triathlon,0,0,0,0
+21,triathlon,0,0,0,0
+35,triathlon,0,0,0,0
+22,triathlon,0,0,0,0
+27,triathlon,0,0,0,0
+36,triathlon,0,0,0,0
+24,triathlon,0,0,0,0
+38,triathlon,0,0,0,0
+23,triathlon,0,0,0,0
+19,triathlon,0,0,0,0
+20,triathlon,0,0,0,0
+29,triathlon,0,0,0,0
+32,triathlon,0,0,0,0
+33,triathlon,0,0,0,0
+28,volleyball,2,5,2,9
+29,volleyball,3,1,4,8
+27,volleyball,1,0,7,8
+26,volleyball,3,3,1,7
+30,volleyball,4,1,2,7
+25,volleyball,1,5,0,6
+24,volleyball,2,1,2,5
+31,volleyball,1,2,1,4
+23,volleyball,0,0,4,4
+22,volleyball,2,1,0,3
+33,volleyball,1,2,0,3
+32,volleyball,1,1,1,3
+34,volleyball,0,1,2,3
+20,volleyball,1,1,0,2
+35,volleyball,1,1,0,2
+21,volleyball,2,0,0,2
+19,volleyball,1,1,0,2
+37,volleyball,1,1,0,2
+38,volleyball,0,0,1,1
+41,volleyball,1,0,0,1
+39,volleyball,0,0,1,1
+40,volleyball,0,0,0,0
+18,volleyball,0,0,0,0
+36,volleyball,0,0,0,0
+23,weightlifting,5,3,2,10
+25,weightlifting,3,2,2,7
+22,weightlifting,1,3,0,4
+21,weightlifting,1,1,2,4
+24,weightlifting,1,1,1,3
+27,weightlifting,1,1,1,3
+28,weightlifting,1,0,2,3
+31,weightlifting,0,0,2,2
+26,weightlifting,1,1,0,2
+30,weightlifting,0,1,1,2
+32,weightlifting,0,1,1,2
+19,weightlifting,0,1,0,1
+33,weightlifting,1,0,0,1
+18,weightlifting,0,0,1,1
+34,weightlifting,0,0,0,0
+35,weightlifting,0,0,0,0
+41,weightlifting,0,0,0,0
+20,weightlifting,0,0,0,0
+17,weightlifting,0,0,0,0
+29,weightlifting,0,0,0,0
+36,weightlifting,0,0,0,0
+16,weightlifting,0,0,0,0
+27,wrestling,1,2,8,11
+25,wrestling,4,2,4,10
+24,wrestling,2,3,4,9
+22,wrestling,3,0,5,8
+31,wrestling,1,0,5,6
+26,wrestling,2,2,1,5
+28,wrestling,0,2,2,4
+21,wrestling,1,0,2,3
+29,wrestling,0,1,2,3
+23,wrestling,1,1,0,2
+20,wrestling,1,1,0,2
+34,wrestling,1,1,0,2
+32,wrestling,1,1,0,2
+36,wrestling,0,0,1,1
+33,wrestling,0,1,0,1
+30,wrestling,0,0,1,1
+38,wrestling,0,1,0,1
+35,wrestling,0,0,0,0
+18,wrestling,0,0,0,0
+19,wrestling,0,0,0,0

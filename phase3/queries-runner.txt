@@ -5,19 +5,38 @@
 -- may differently named files, or you may have your queries split into more
 -- files than expected here.
 --
+\echo -- We have limited the number of rows of the output to 10.
+\echo
 \echo -------------------- Loading schema and data: -------------------- 
 \echo
-\i schema.txt
-\i data.txt
+\i /Users/steveny/Documents/csc343_files/olympics-project/phase2/import_data.sql
 \echo
-\echo  -------------------- Investigative Question 1: ------------------ 
+\echo  -------------------- Investigative Question 1: ------------------
 \echo
-\i iq1.txt
+\echo queries_q1.sql
+\echo
+\i queries_q1.sql
+\echo
+\i output_q1.sql
 \echo
 \echo  -------------------- Investigative Question 2: ------------------ 
 \echo
-\i iq2.txt
+\echo queries_q2.sql
 \echo
-\echo  -------------------- Investigative Question 2: ------------------
+\i queries_q2.sql
 \echo
-\i iq3.txt
+\i output_q2_age.sql
+\echo
+\i output_q2_height.sql
+\echo
+\i output_q2_weight.sql
+\echo
+\echo  -------------------- Investigative Question 3: ------------------
+\echo
+\echo queries_q3.sql
+\echo
+\i queries_q3.sql
+\echo
+\i output_q3a.sql
+\echo
+\i output_q3b.sql
