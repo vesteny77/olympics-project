@@ -1,5 +1,5 @@
 -- loading the schema
-\i schema.ddl 
+\i /Users/steveny/Documents/csc343_files/olympics-project/phase2/schema.ddl
 
 -- create temporary tables
 DROP TABLE IF EXISTS AthletesTmp CASCADE;

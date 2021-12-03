@@ -3,34 +3,41 @@
 -- And which category of sport has the strongest such correlation?
 
 SET SEARCH_PATH TO Olympics;
-DROP TABLE IF EXISTS q2 CASCADE;
+DROP TABLE IF EXISTS q2_age CASCADE;
+DROP TABLE IF EXISTS q2_weight CASCADE;
+DROP TABLE IF EXISTS q2_height CASCADE;
 
-CREATE TABLE q2 (
-    id INT,
-    age INT,
-    height FLOAT,
-    weight FLOAT,
+CREATE TABLE q2_age (
     sport VARCHAR(35),
-    gold INT,
-    silver INT,
-    bronze INT,
+    age INT,
+    total INT
+);
+
+CREATE TABLE q2_weight (
+    sport VARCHAR(35),
+    weight FLOAT,
+    total INT
+);
+
+CREATE TABLE q2_height (
+    sport VARCHAR(35),
+    height FLOAT,
     total INT
 );
 
 -- Define Views
-DROP VIEW IF EXISTS AthletePerformance CASCADE;
 DROP VIEW IF EXISTS AthletePerformanceAge CASCADE;
 DROP VIEW IF EXISTS AthletePerformanceHeight CASCADE;
 DROP VIEW IF EXISTS AthletePerformanceWeight CASCADE;
-DROP VIEW IF EXISTS AthletePerformanceAquatics CASCADE;
-DROP VIEW IF EXISTS AthletePerformanceTableTennis CASCADE;
-DROP VIEW IF EXISTS AthletePerformanceVolleyball CASCADE;
-
-CREATE VIEW AthletePerformance AS
-    SELECT id, (2016 - EXTRACT(YEAR FROM dob)) AS age, height, weight,
-        sport, gold, silver, bronze, gold + silver + bronze as total
-    FROM Athletes NATURAL JOIN Performance
-    ORDER BY sport, total DESC;
+DROP VIEW IF EXISTS AthletePerformanceAquaticsAge CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceTableTennisAge CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceVolleyballAge CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceAquaticsWeight CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceTableTennisWeight CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceVolleyballWeight CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceAquaticsHeight CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceTableTennisHeight CASCADE;
+DROP VIEW IF EXISTS AthletePerformanceVolleyballHeight CASCADE;
 
 -- First part
 CREATE VIEW AthletePerformanceAge AS
@@ -57,27 +64,69 @@ CREATE VIEW AthletePerformanceWeight AS
     ORDER BY sport, total DESC;
 
 -- Second Part
-CREATE VIEW AthletePerformanceAquatics AS
-    SELECT age, height, weight, total
-    FROM AthletePerformance
+CREATE VIEW AthletePerformanceAquaticsAge AS
+    SELECT sport, age, total
+    FROM AthletePerformanceAge
     WHERE sport = 'aquatics';
 
-CREATE VIEW AthletePerformanceTableTennis AS
-    SELECT age, height, weight, total
-    FROM AthletePerformance
+CREATE VIEW AthletePerformanceAquaticsWeight AS
+    SELECT sport, weight, total
+    FROM AthletePerformanceWeight
+    WHERE sport = 'aquatics';
+
+CREATE VIEW AthletePerformanceAquaticsHeight AS
+    SELECT sport, height, total
+    FROM AthletePerformanceHeight
+    WHERE sport = 'aquatics';
+
+CREATE VIEW AthletePerformanceTableTennisAge AS
+    SELECT sport, age, total
+    FROM AthletePerformanceAge
     WHERE sport = 'table tennis';
 
-CREATE VIEW AthletePerformanceVolleyball AS
-    SELECT age, height, weight, total
-    FROM AthletePerformance
+CREATE VIEW AthletePerformanceTableTennisWeight AS
+    SELECT sport, weight, total
+    FROM AthletePerformanceWeight
+    WHERE sport = 'table tennis';
+
+CREATE VIEW AthletePerformanceTableTennisHeight AS
+    SELECT sport, height, total
+    FROM AthletePerformanceHeight
+    WHERE sport = 'table tennis';
+
+CREATE VIEW AthletePerformanceVolleyballAge AS
+    SELECT sport, age, total
+    FROM AthletePerformanceAge
+    WHERE sport = 'volleyball';
+
+CREATE VIEW AthletePerformanceVolleyballWeight AS
+    SELECT sport, weight, total
+    FROM AthletePerformanceWeight
+    WHERE sport = 'volleyball';
+
+CREATE VIEW AthletePerformanceVolleyballHeight AS
+    SELECT sport, height, total
+    FROM AthletePerformanceHeight
     WHERE sport = 'volleyball';
 
 -- Output Results
-INSERT INTO q2
-    SELECT * FROM AthletePerformance;
+INSERT INTO q2_age
+    SELECT * FROM AthletePerformanceAquaticsAge LIMIT 1;
+INSERT INTO q2_age
+    SELECT * FROM AthletePerformanceTableTennisAge LIMIT 1;
+INSERT INTO q2_age
+    SELECT * FROM AthletePerformanceVolleyballAge LIMIT 1;
 
--- SELECT * FROM AthletePerformanceAge;
--- SELECT * FROM AthletePerformanceHeight;
--- SELECT * FROM AthletePerformanceWeight;
+INSERT INTO q2_height
+    SELECT * FROM AthletePerformanceAquaticsHeight LIMIT 1;
+INSERT INTO q2_height
+    SELECT * FROM AthletePerformanceTableTennisHeight LIMIT 1;
+INSERT INTO q2_height
+    SELECT * FROM AthletePerformanceVolleyballHeight LIMIT 1;
 
-COPY (SELECT * FROM AthletePerformanceage) to '/Users/steveny/Documents/csc343_files/olympics-project/phase3/athlete_performance_age.csv' csv header;
+INSERT INTO q2_weight
+    SELECT * FROM AthletePerformanceAquaticsWeight LIMIT 1;
+INSERT INTO q2_weight
+    SELECT * FROM AthletePerformanceTableTennisWeight LIMIT 1;
+INSERT INTO q2_weight
+    SELECT * FROM AthletePerformanceVolleyballWeight LIMIT 1;
