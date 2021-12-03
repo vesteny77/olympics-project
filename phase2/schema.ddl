@@ -20,8 +20,8 @@ CREATE TABLE Entities (
     code CHAR(3) PRIMARY KEY
 );
 
--- A tuple in this relation represents a country which includes some information
--- about the economic status of the country when the 2016 Olympics was played.
+-- A tuple in this relation represents a country that participated
+-- in the 2016 Olympics in Rio de Janeiro.
 CREATE TABLE Countries (
     country VARCHAR(60) NOT NULL,
     code CHAR(3) NOT NULL,

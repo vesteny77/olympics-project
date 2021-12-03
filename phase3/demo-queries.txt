@@ -185,7 +185,21 @@ psql:queries_q3.sql:22: NOTICE:  view "totalpersport" does not exist, skipping
 DROP VIEW
 psql:queries_q3.sql:23: NOTICE:  view "aggtps" does not exist, skipping
 DROP VIEW
-psql:queries_q3.sql:24: NOTICE:  view "best" does not exist, skipping
+psql:queries_q3.sql:24: NOTICE:  view "isbestc" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:25: NOTICE:  view "nobestc" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:26: NOTICE:  view "besttempc" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:27: NOTICE:  view "isbests" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:28: NOTICE:  view "nobests" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:29: NOTICE:  view "besttemps" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:30: NOTICE:  view "bestc" does not exist, skipping
+DROP VIEW
+psql:queries_q3.sql:31: NOTICE:  view "bests" does not exist, skipping
 DROP VIEW
 CREATE VIEW
 CREATE VIEW
@@ -230,3 +244,4 @@ SET
  boxing     |         |          0
  canoe      | GER     |         16
 (10 rows)
+
